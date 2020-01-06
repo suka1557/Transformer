@@ -21,7 +21,7 @@ def train_model(model, opt):
         total_loss = 0
         if opt.floyd is False:
             print("   %dm: epoch %d [%s]  %d%%  loss = %s" %\
-            ((time.time() - start)//60, epoch + 1, "".join(' '*20), 0, '...'), end='\r')
+            ((time.time() - start)//60, epoch + 1, "".join(' '*20), 0, '...'))
         
         if opt.checkpoint > 0:
             torch.save(model.state_dict(), 'weights/model_weights')
